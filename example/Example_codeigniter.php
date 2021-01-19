@@ -1,4 +1,8 @@
 <?php 
+Class Getqris extends CI_Controller{
+
+public function index(){
+$this->load->library('seppulsa');
 $nominal = 100000;
 $callback = "https://webanda.com/callback";
 $return = "https://webanda.com/return";
@@ -14,6 +18,10 @@ redirect($respon['url']);
 //Ambil image qr dan nominal 
 $qr = $respon['imagebase64'];
 $nom = $respon['nominal']
+  }
+}
 ?>
+
+//html or views fille
 <img width="240px" src="data:image/png;base64,<?=$qr?>">
 <p style="padding-top:25px;"><?=$nom?></p>
