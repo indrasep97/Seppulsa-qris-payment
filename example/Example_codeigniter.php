@@ -17,7 +17,8 @@ redirect($respon['url']);
 
 //Ambil image qr dan nominal 
 $qr = $respon['imagebase64'];
-$nom = $respon['nominal']
+$nom = $respon['nominal'];
+
   }
 }
 ?>
