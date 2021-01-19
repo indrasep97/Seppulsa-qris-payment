@@ -23,6 +23,13 @@ $nom = $respon['nominal'];
 }
 ?>
 
-//html or views fille
-<img width="240px" src="data:image/png;base64,<?=$qr?>">
-<p style="padding-top:25px;"><?=$nom?></p>
+<!--html or views fille-->
+<html>
+  <head>
+    <title>example qris payment seppulsa</title>
+  </head>
+     <body>
+      <img width="240px" src="data:image/png;base64,<?=$qr?>">
+        <p style="padding-top:25px;"><?=$nom?></p>
+     </body>
+</html>
