@@ -1,5 +1,5 @@
 <?php 
-Class callback extends CI_Controller{
+Class Callback extends CI_Controller{
 
 Public function index(){
 $id = $_POST['id'];
