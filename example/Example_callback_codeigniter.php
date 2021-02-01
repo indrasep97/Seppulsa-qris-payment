@@ -11,7 +11,7 @@ $key = ""; //isi dengan key verif yang di input di menu api
 
 if(isset($_POST['id'])){
  if($verif != $key ){
-   die('KEY TIDAK FAILED');
+   die('KEY TIDAK VALID');
      }else{
       if($status == "sukses"){
         //proses sistem anda jika pembayaran sukses
