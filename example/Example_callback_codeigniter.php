@@ -15,7 +15,7 @@ if(isset($_POST['id'])){
      }else{
       if($status == "sukses"){
         //proses sistem anda jika pembayaran sukses
-        }else{ 
+        }else if($status == "gagal"){ 
          //proses sistem  anda jika pembayaran gagal
         }
       }
