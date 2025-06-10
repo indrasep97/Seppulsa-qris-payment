@@ -9,3 +9,4 @@ Cara pemasangan pada codeigniter v3
 - buat controller seperti <a href="https://github.com/indrasep97/Seppulsa-qris-payment/blob/main/example/Example_codeigniter.php">example berikut</a>
 - di contoh berikut ada 2 metode yaitu redirect ke halaman dan direct atau ambil qr dan nominal 
 - contoh source callback <a href="https://github.com/indrasep97/Seppulsa-qris-payment/blob/main/example/Example_callback_codeigniter.php">lihat disini</a>
+- untuk Cek transaksi silahkan kirim transaksi dengan id referensi yang sama
