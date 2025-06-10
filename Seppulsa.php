@@ -1,7 +1,7 @@
 <?php
 class Seppulsa
 {
-function qris($nama,$email,$reff,$nominal,$return,$callback){
+function qris($nama,$email,$reff,$nomor,$nominal,$return,$tipe,$callback){
 $api = ""; //isi api payment yang ada di menu api
 $url = "https://seppulsa.com/payment"; 
 $contents = [
@@ -10,9 +10,10 @@ $contents = [
 "nama"=>$nama,
 "email"=>$email,
 "reff"=>$reff,
+"nomor"=>$nomor,
 "return"=>$return,
+"tipe"=>$tipe,
 "callback"=>$callback,
-"format"=>"json",
 ];
 $data = http_build_query($contents);
 
