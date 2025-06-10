@@ -6,30 +6,21 @@ $this->load->library('seppulsa');
 $nominal = 100000;
 $callback = "https://webanda.com/callback";
 $return = "https://webanda.com/return";
+$tipe = "Qris";
 $reff = "INV-1234";
+$nomor = "085157331667";
 $nama = "samsul";
 $email = "samasul@email.com";
-$req = $this->seppulsa->qris($nama,$email,$reff,$nominal,$return,$callback);
+$req = $this->seppulsa->qris($nama,$email,$reff,$nomor,$nominal,$return,$tipe,$callback);
 $respon = json_decode($req,true);
 
 // redirect ke halaman payment qris 
 redirect($respon['url']);
 
-//Ambil image qr dan nominal 
-$qr = $respon['imagebase64'];
+//Ambil qr dan nominal 
+$qr = $respon['qr'];
 $nom = $respon['nominal'];
 
   }
 }
 ?>
-
-<!--html or views fille-->
-<html>
-  <head>
-    <title>example qris payment seppulsa</title>
-  </head>
-     <body>
-      <img width="240px" src="data:image/png;base64,<?=$qr?>">
-        <p style="padding-top:25px;"><?=$nom?></p>
-     </body>
-</html>
