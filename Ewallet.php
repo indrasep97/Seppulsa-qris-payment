@@ -1,7 +1,7 @@
 <?php 
 class Seppulsa 
 { 
-function ewallet($nama,$email,$reff,$nominal,$return,$callback)
+function ewallet($nama,$email,$reff,$nomor,$nominal,$return,$callback)
 { $api = ""; //isi api payment yang ada di menu api 
 $url = "https://seppulsa.com/payment"; 
 $contents = 
@@ -10,12 +10,13 @@ $contents =
 "nominal"=>$nominal, 
 "nama"=>$nama, 
 "email"=>$email, 
-"reff"=>$reff, 
-"return"=>$return, 
+"reff"=>$reff,
+"nomor" => $nomor,
+"return"=>$return,
+ "tipe" => "shopeepay", // shopeepay , ovo , dana , linkaja, Qris
 "callback"=>$callback, 
-"format"=>"json",
-"pay" => "ovo", // shopeepay , ovo , dana , linkaja
-"no" => "+6283840183337" //digunakan untuk ovo dan linkaja
+
+
 ]; 
 $data = http_build_query($contents); 
 $ch = curl_init(); 
